@@ -2,21 +2,19 @@
 
 import re
 
-
 # Defining  the function for the password
 def password_is_valid(password):
 
     #Checking the if the password exists
     if len(password) == 0:
         raise Exception ("password should exist")
-        
-    
-    else: 
-        # first condition jhas been already met if this gets executed
+      
+    else: # first condition jhas been already met if this gets executed
         
         # Checking the length of the password
         if len(password)<=8:
             raise Exception("password should be longer than than 8 characters")
+	
         #Checking for a lowercase in password
         elif not re.search('[a-z]', password):
 
@@ -33,8 +31,10 @@ def password_is_valid(password):
        #Checking for a characters in password 
         elif  not re.search("[!@#$%^&*()_+:;'{}[]|\;'<>?/.,]", password):
             raise Exception('password should have at least one special character')
+	
 	else:
 	    print(password, "is okay")
+	
 #Defiining the password_is_ok
 def password_is_ok(password):
     #Asserting the length is greater than 8 characters
