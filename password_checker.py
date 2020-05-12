@@ -30,3 +30,12 @@ def password_is_valid(password):
             raise Exception('password should have at least one special character')
         else:
             return True
+
+#Defiining the password_is_ok
+def password_is_ok(password):
+	
+    #Asserting the length to be greater than 8 characters
+    if len(password) <=8:
+        return False
+        print("password's length smaller than 8 characters")
+    
