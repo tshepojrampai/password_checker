@@ -39,3 +39,16 @@ def password_is_ok(password):
         return False
         print("password's length smaller than 8 characters")
     
+    else: #Assuring that every other condition inclusive of the first two vallidates password
+   
+   	    if not re.search('[a-z]', password):
+   	        return True
+   	    else:
+   	        if not re.search('[A-Z]', password):
+   	            return True
+   	        else:
+   	            if not re.search('[0-9]', password):
+   	                return True
+   	            else:
+   	                if not re.search("[$&+,:;=?@#|'<>.-^*%!]", password):
+   	                    return True
