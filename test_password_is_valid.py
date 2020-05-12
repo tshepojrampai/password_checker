@@ -14,3 +14,6 @@ def test_password_len():
 def test_password_lowcase():
     with pytest.raises(Exception, match = "password should have at least one lowercase letter"):
         pass_check.password_is_valid("HELLOKITTY1!")
+def test_password_uppcase():
+    with pytest.raises(Exception, match = "password should have at least one uppercase letter"):
+        pass_check.password_is_valid("hellokitty1!")
