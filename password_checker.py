@@ -21,3 +21,6 @@ def password_is_valid(password):
        # UPPERcase in password
         elif not re.search('[A-Z]', password):
             raise Exception('password should have at least one uppercase letter')
+        # digit in password
+        elif not re.search('[0-9]', password):
+            raise Exception('password should at least have one digit')
