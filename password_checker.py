@@ -14,4 +14,7 @@ def password_is_valid(password):
         if len(password)<=8:
             raise Exception("password should be longer than than 8 characters")
 	
-	
+      # lowercase in password
+        elif not re.search('[a-z]', password):
+
+            raise Exception('password should have at least one lowercase letter')	
