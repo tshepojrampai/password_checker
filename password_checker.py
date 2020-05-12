@@ -18,3 +18,6 @@ def password_is_valid(password):
         elif not re.search('[a-z]', password):
 
             raise Exception('password should have at least one lowercase letter')	
+       # UPPERcase in password
+        elif not re.search('[A-Z]', password):
+            raise Exception('password should have at least one uppercase letter')
