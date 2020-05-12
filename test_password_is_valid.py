@@ -20,3 +20,6 @@ def test_password_uppcase():
 def test_password_digit():
     with pytest.raises(Exception, match = "password should at least have one digit"):
         pass_check.password_is_valid("Helllokitty!")
+def test_password_char():
+    with pytest.raises(Exception, match = "password should have at least one special character"):
+        pass_check.password_is_valid("Helllokitty1")
