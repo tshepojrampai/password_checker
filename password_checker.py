@@ -24,3 +24,9 @@ def password_is_valid(password):
         # digit in password
         elif not re.search('[0-9]', password):
             raise Exception('password should at least have one digit')
+
+       #character(s) in password 
+        elif  not re.search("[!@#$%^&*()_+:;'{}[]|\;'<>?/.,]", password):
+            raise Exception('password should have at least one special character')
+        else:
+            return True
